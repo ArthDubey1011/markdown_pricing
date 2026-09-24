@@ -1,0 +1,680 @@
+{
+  "n_products": 43400,
+  "n_events": 173600,
+  "rounds": [
+    {
+      "stage": 1,
+      "mean_depth": 25.1,
+      "incr_lift_mean": 15.0,
+      "incr_lift_median": 14.0,
+      "cum_lift": 15.0,
+      "breakeven": 35.3
+    },
+    {
+      "stage": 2,
+      "mean_depth": 35.0,
+      "incr_lift_mean": 20.9,
+      "incr_lift_median": 21.2,
+      "cum_lift": 40.0,
+      "breakeven": 56.7
+    },
+    {
+      "stage": 3,
+      "mean_depth": 20.0,
+      "incr_lift_mean": 11.9,
+      "incr_lift_median": 11.7,
+      "cum_lift": 58.3,
+      "breakeven": 25.6
+    },
+    {
+      "stage": 4,
+      "mean_depth": 40.0,
+      "incr_lift_mean": 23.9,
+      "incr_lift_median": 25.5,
+      "cum_lift": 100.8,
+      "breakeven": 68.3
+    }
+  ],
+  "lift_mean": 17.9,
+  "lift_median": 16.7,
+  "lift_skew": 0.4,
+  "breakeven_share_pct": 0.6,
+  "models": {
+    "r2": {
+      "M1_depth": 0.212,
+      "M2_x_seasonality": 0.486,
+      "M3_x_segment": 0.791,
+      "M4_segment_plus_seasonality": 0.791
+    },
+    "seasonality_coef_M2": 0.497,
+    "seasonality_coef_M4": 0.0002,
+    "seasonality_p_M4": 0.946,
+    "channel_p": {
+      "Online": 0.736,
+      "Social Media": 0.455
+    },
+    "price_gap_p": 0.778,
+    "round_p_min": 0.772,
+    "slopes": {
+      "Rainy-Bodycare": 0.854,
+      "Rainy-Makeup": 0.15,
+      "Rainy-Skincare": 0.153,
+      "Spring-Bodycare": 0.152,
+      "Spring-Makeup": 0.851,
+      "Spring-Skincare": 0.151,
+      "Summer-Bodycare": 0.852,
+      "Summer-Makeup": 0.85,
+      "Summer-Skincare": 0.853,
+      "Winter-Bodycare": 0.854,
+      "Winter-Makeup": 0.856,
+      "Winter-Skincare": 0.853
+    }
+  },
+  "in_season_segments": [
+    "Rainy-Bodycare",
+    "Spring-Makeup",
+    "Summer-Bodycare",
+    "Summer-Makeup",
+    "Summer-Skincare",
+    "Winter-Bodycare",
+    "Winter-Makeup",
+    "Winter-Skincare"
+  ],
+  "off_season_segments": [
+    "Rainy-Makeup",
+    "Rainy-Skincare",
+    "Spring-Bodycare",
+    "Spring-Skincare"
+  ],
+  "slope_in": 0.853,
+  "slope_off": 0.152,
+  "slope_ratio": 5.6,
+  "elasticity": {
+    "overall": -0.65,
+    "in_season": -0.85,
+    "off_season": -0.15,
+    "by_season": {
+      "Rainy": -0.3,
+      "Spring": -0.27,
+      "Summer": -0.85,
+      "Winter": -0.85
+    },
+    "by_category": {
+      "Bodycare": -0.73,
+      "Makeup": -0.74,
+      "Skincare": -0.5
+    },
+    "by_channel": {
+      "In-Store": -0.66,
+      "Online": -0.65,
+      "Social Media": -0.65
+    },
+    "by_segment": {
+      "Rainy-Bodycare": -0.85,
+      "Rainy-Makeup": -0.15,
+      "Rainy-Skincare": -0.15,
+      "Spring-Bodycare": -0.15,
+      "Spring-Makeup": -0.85,
+      "Spring-Skincare": -0.15,
+      "Summer-Bodycare": -0.85,
+      "Summer-Makeup": -0.85,
+      "Summer-Skincare": -0.85,
+      "Winter-Bodycare": -0.85,
+      "Winter-Makeup": -0.85,
+      "Winter-Skincare": -0.85
+    }
+  },
+  "share_products_in_season_pct": 63.8,
+  "breakeven_share_by_fit_pct": {
+    "in_season": 0.97,
+    "off_season": 0.0
+  },
+  "anova": {
+    "F": 3434.1,
+    "p": 0.0,
+    "eta_squared": 0.192,
+    "kruskal_H": 7678.2,
+    "kruskal_p": 0.0,
+    "tukey_all_significant_lift": true,
+    "tukey_all_significant_revenue": true,
+    "tiers": [
+      {
+        "discount_band": "10-20%",
+        "n": 8653,
+        "unit_lift": 8.88,
+        "ci95": 0.13,
+        "revenue_change": -7.24
+      },
+      {
+        "discount_band": "20-30%",
+        "n": 12402,
+        "unit_lift": 14.73,
+        "ci95": 0.17,
+        "revenue_change": -13.49
+      },
+      {
+        "discount_band": "30-40%",
+        "n": 12749,
+        "unit_lift": 20.59,
+        "ci95": 0.24,
+        "revenue_change": -21.13
+      },
+      {
+        "discount_band": "40-50%",
+        "n": 9596,
+        "unit_lift": 26.59,
+        "ci95": 0.35,
+        "revenue_change": -30.04
+      }
+    ],
+    "tukey": [
+      {
+        "group1": "10-20%",
+        "group2": "20-30%",
+        "meandiff": 5.85,
+        "p-adj": 0.0,
+        "lower": 5.4,
+        "upper": 6.31,
+        "reject": true
+      },
+      {
+        "group1": "10-20%",
+        "group2": "30-40%",
+        "meandiff": 11.71,
+        "p-adj": 0.0,
+        "lower": 11.26,
+        "upper": 12.16,
+        "reject": true
+      },
+      {
+        "group1": "10-20%",
+        "group2": "40-50%",
+        "meandiff": 17.71,
+        "p-adj": 0.0,
+        "lower": 17.22,
+        "upper": 18.19,
+        "reject": true
+      },
+      {
+        "group1": "20-30%",
+        "group2": "30-40%",
+        "meandiff": 5.86,
+        "p-adj": 0.0,
+        "lower": 5.45,
+        "upper": 6.27,
+        "reject": true
+      },
+      {
+        "group1": "20-30%",
+        "group2": "40-50%",
+        "meandiff": 11.85,
+        "p-adj": 0.0,
+        "lower": 11.41,
+        "upper": 12.29,
+        "reject": true
+      },
+      {
+        "group1": "30-40%",
+        "group2": "40-50%",
+        "meandiff": 6.0,
+        "p-adj": 0.0,
+        "lower": 5.56,
+        "upper": 6.43,
+        "reject": true
+      }
+    ]
+  },
+  "counterfactual": {
+    "cogs_30": {
+      "revenue_pct": 10.7,
+      "margin_pct": -10.9,
+      "products_losing_margin_pct": 76.6
+    },
+    "cogs_40": {
+      "revenue_pct": 10.7,
+      "margin_pct": -22.9,
+      "products_losing_margin_pct": 97.9
+    },
+    "cogs_50": {
+      "revenue_pct": 10.7,
+      "margin_pct": -39.7,
+      "products_losing_margin_pct": 100.0
+    },
+    "in_season": {
+      "revenue_pct": 21.6,
+      "margin_pct": -15.7,
+      "products_losing_margin_pct": 96.7
+    },
+    "off_season": {
+      "revenue_pct": -22.5,
+      "margin_pct": -44.9,
+      "products_losing_margin_pct": 100.0
+    }
+  },
+  "waterfall": {
+    "revenue": [
+      100,
+      61.1,
+      -50.4
+    ],
+    "margin": [
+      100,
+      61.1,
+      -84.0
+    ]
+  },
+  "policy": {
+    "grid": [
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5
+    ],
+    "curves": {
+      "Rainy-Bodycare": {
+        "revenue": [
+          10.92,
+          15.93,
+          20.5,
+          24.52,
+          27.86,
+          30.37,
+          31.92,
+          32.33,
+          31.43
+        ],
+        "margin": [
+          2.71,
+          2.29,
+          0.42,
+          -3.15,
+          -8.67,
+          -16.43,
+          -26.71,
+          -39.85,
+          -56.19
+        ]
+      },
+      "Rainy-Makeup": {
+        "revenue": [
+          -6.58,
+          -10.12,
+          -13.82,
+          -17.71,
+          -21.77,
+          -26.02,
+          -30.45,
+          -35.08,
+          -39.91
+        ],
+        "margin": [
+          -13.5,
+          -20.69,
+          -28.19,
+          -36.0,
+          -44.12,
+          -52.58,
+          -61.36,
+          -70.49,
+          -79.97
+        ]
+      },
+      "Rainy-Skincare": {
+        "revenue": [
+          -6.51,
+          -10.02,
+          -13.7,
+          -17.56,
+          -21.6,
+          -25.83,
+          -30.25,
+          -34.87,
+          -39.69
+        ],
+        "margin": [
+          -13.43,
+          -20.6,
+          -28.08,
+          -35.88,
+          -44.0,
+          -52.46,
+          -61.25,
+          -70.4,
+          -79.9
+        ]
+      },
+      "Spring-Bodycare": {
+        "revenue": [
+          -6.53,
+          -10.05,
+          -13.74,
+          -17.6,
+          -21.65,
+          -25.89,
+          -30.32,
+          -34.94,
+          -39.76
+        ],
+        "margin": [
+          -13.45,
+          -20.63,
+          -28.11,
+          -35.91,
+          -44.04,
+          -52.49,
+          -61.29,
+          -70.43,
+          -79.92
+        ]
+      },
+      "Spring-Makeup": {
+        "revenue": [
+          10.84,
+          15.81,
+          20.34,
+          24.31,
+          27.61,
+          30.08,
+          31.59,
+          31.96,
+          31.03
+        ],
+        "margin": [
+          2.63,
+          2.19,
+          0.28,
+          -3.31,
+          -8.85,
+          -16.61,
+          -26.89,
+          -40.02,
+          -56.32
+        ]
+      },
+      "Spring-Skincare": {
+        "revenue": [
+          -6.54,
+          -10.06,
+          -13.76,
+          -17.63,
+          -21.68,
+          -25.92,
+          -30.34,
+          -34.97,
+          -39.79
+        ],
+        "margin": [
+          -13.46,
+          -20.64,
+          -28.13,
+          -35.93,
+          -44.06,
+          -52.51,
+          -61.3,
+          -70.44,
+          -79.93
+        ]
+      },
+      "Summer-Bodycare": {
+        "revenue": [
+          10.87,
+          15.85,
+          20.39,
+          24.38,
+          27.69,
+          30.18,
+          31.7,
+          32.09,
+          31.17
+        ],
+        "margin": [
+          2.66,
+          2.22,
+          0.33,
+          -3.26,
+          -8.79,
+          -16.55,
+          -26.83,
+          -39.96,
+          -56.28
+        ]
+      },
+      "Summer-Makeup": {
+        "revenue": [
+          10.83,
+          15.78,
+          20.3,
+          24.27,
+          27.55,
+          30.02,
+          31.52,
+          31.88,
+          30.94
+        ],
+        "margin": [
+          2.62,
+          2.16,
+          0.25,
+          -3.35,
+          -8.89,
+          -16.66,
+          -26.94,
+          -40.05,
+          -56.35
+        ]
+      },
+      "Summer-Skincare": {
+        "revenue": [
+          10.9,
+          15.89,
+          20.44,
+          24.44,
+          27.77,
+          30.27,
+          31.8,
+          32.2,
+          31.29
+        ],
+        "margin": [
+          2.68,
+          2.25,
+          0.37,
+          -3.21,
+          -8.74,
+          -16.49,
+          -26.78,
+          -39.91,
+          -56.24
+        ]
+      },
+      "Winter-Bodycare": {
+        "revenue": [
+          10.93,
+          15.95,
+          20.52,
+          24.54,
+          27.89,
+          30.41,
+          31.96,
+          32.38,
+          31.48
+        ],
+        "margin": [
+          2.72,
+          2.31,
+          0.43,
+          -3.13,
+          -8.65,
+          -16.4,
+          -26.69,
+          -39.83,
+          -56.17
+        ]
+      },
+      "Winter-Makeup": {
+        "revenue": [
+          10.97,
+          16.0,
+          20.6,
+          24.64,
+          28.01,
+          30.55,
+          32.12,
+          32.55,
+          31.67
+        ],
+        "margin": [
+          2.75,
+          2.36,
+          0.5,
+          -3.05,
+          -8.57,
+          -16.31,
+          -26.6,
+          -39.75,
+          -56.11
+        ]
+      },
+      "Winter-Skincare": {
+        "revenue": [
+          10.91,
+          15.91,
+          20.47,
+          24.48,
+          27.81,
+          30.32,
+          31.86,
+          32.26,
+          31.35
+        ],
+        "margin": [
+          2.69,
+          2.27,
+          0.39,
+          -3.18,
+          -8.71,
+          -16.46,
+          -26.75,
+          -39.88,
+          -56.22
+        ]
+      }
+    },
+    "by_segment": [
+      {
+        "segment": "Rainy-Bodycare",
+        "slope": 0.854,
+        "margin_best_depth": 0.1,
+        "margin_at_best_pct": 2.7,
+        "revenue_best_depth": 0.45,
+        "revenue_at_best_pct": 32.3,
+        "margin_at_revenue_best_pct": -39.8
+      },
+      {
+        "segment": "Rainy-Makeup",
+        "slope": 0.15,
+        "margin_best_depth": 0.1,
+        "margin_at_best_pct": -13.5,
+        "revenue_best_depth": 0.1,
+        "revenue_at_best_pct": -6.6,
+        "margin_at_revenue_best_pct": -13.5
+      },
+      {
+        "segment": "Rainy-Skincare",
+        "slope": 0.153,
+        "margin_best_depth": 0.1,
+        "margin_at_best_pct": -13.4,
+        "revenue_best_depth": 0.1,
+        "revenue_at_best_pct": -6.5,
+        "margin_at_revenue_best_pct": -13.4
+      },
+      {
+        "segment": "Spring-Bodycare",
+        "slope": 0.152,
+        "margin_best_depth": 0.1,
+        "margin_at_best_pct": -13.5,
+        "revenue_best_depth": 0.1,
+        "revenue_at_best_pct": -6.5,
+        "margin_at_revenue_best_pct": -13.5
+      },
+      {
+        "segment": "Spring-Makeup",
+        "slope": 0.851,
+        "margin_best_depth": 0.1,
+        "margin_at_best_pct": 2.6,
+        "revenue_best_depth": 0.45,
+        "revenue_at_best_pct": 32.0,
+        "margin_at_revenue_best_pct": -40.0
+      },
+      {
+        "segment": "Spring-Skincare",
+        "slope": 0.151,
+        "margin_best_depth": 0.1,
+        "margin_at_best_pct": -13.5,
+        "revenue_best_depth": 0.1,
+        "revenue_at_best_pct": -6.5,
+        "margin_at_revenue_best_pct": -13.5
+      },
+      {
+        "segment": "Summer-Bodycare",
+        "slope": 0.852,
+        "margin_best_depth": 0.1,
+        "margin_at_best_pct": 2.7,
+        "revenue_best_depth": 0.45,
+        "revenue_at_best_pct": 32.1,
+        "margin_at_revenue_best_pct": -40.0
+      },
+      {
+        "segment": "Summer-Makeup",
+        "slope": 0.85,
+        "margin_best_depth": 0.1,
+        "margin_at_best_pct": 2.6,
+        "revenue_best_depth": 0.45,
+        "revenue_at_best_pct": 31.9,
+        "margin_at_revenue_best_pct": -40.1
+      },
+      {
+        "segment": "Summer-Skincare",
+        "slope": 0.853,
+        "margin_best_depth": 0.1,
+        "margin_at_best_pct": 2.7,
+        "revenue_best_depth": 0.45,
+        "revenue_at_best_pct": 32.2,
+        "margin_at_revenue_best_pct": -39.9
+      },
+      {
+        "segment": "Winter-Bodycare",
+        "slope": 0.854,
+        "margin_best_depth": 0.1,
+        "margin_at_best_pct": 2.7,
+        "revenue_best_depth": 0.45,
+        "revenue_at_best_pct": 32.4,
+        "margin_at_revenue_best_pct": -39.8
+      },
+      {
+        "segment": "Winter-Makeup",
+        "slope": 0.856,
+        "margin_best_depth": 0.1,
+        "margin_at_best_pct": 2.8,
+        "revenue_best_depth": 0.45,
+        "revenue_at_best_pct": 32.6,
+        "margin_at_revenue_best_pct": -39.7
+      },
+      {
+        "segment": "Winter-Skincare",
+        "slope": 0.853,
+        "margin_best_depth": 0.1,
+        "margin_at_best_pct": 2.7,
+        "revenue_best_depth": 0.45,
+        "revenue_at_best_pct": 32.3,
+        "margin_at_revenue_best_pct": -39.9
+      }
+    ]
+  },
+  "actual_avg_depth_pct": 30.0
+}

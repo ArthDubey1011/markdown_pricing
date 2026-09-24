@@ -1,0 +1,13 @@
+segment,slope,season_fit
+Rainy-Bodycare,0.853842463701745,in season
+Rainy-Makeup,0.14984432627677152,off season
+Rainy-Skincare,0.15282215698809418,off season
+Spring-Bodycare,0.15189625729471248,off season
+Spring-Makeup,0.8509047733911459,in season
+Spring-Skincare,0.15146279801075319,off season
+Summer-Bodycare,0.8519298322204203,in season
+Summer-Makeup,0.8502481840170804,in season
+Summer-Skincare,0.8527979304843779,in season
+Winter-Bodycare,0.8542168750325516,in season
+Winter-Makeup,0.8556374591639534,in season
+Winter-Skincare,0.8532967768402802,in season
