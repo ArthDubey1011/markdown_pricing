@@ -1,8 +1,0 @@
-duckdb>=1.1
-pandas>=2.2
-numpy>=1.26
-scipy>=1.11
-statsmodels>=0.14
-matplotlib>=3.8
-# optional, for the notebook
-jupyter
